@@ -5,22 +5,22 @@ h1 {
 }
 
 h2 {
-    color: rgb(250, 181, 91);
+    color: #fdb250;
     font-size: 1.5em;
 }
 
 h3 {
-    color: #71cccc;
+    color: hsl(278, 78%, 70%);
     font-size: 1.3em;
 }
 
 h4 {
-    color: hsla(310, 100%, 44%, 0.992);
+    color: rgba(231, 3, 193, 0.992);
     font-size: 1.1em;
 }
 
 p {
-    color: black;
+    color: hsl(0, 3%, 12%);
 }
 
 body {

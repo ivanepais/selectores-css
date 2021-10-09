@@ -38,9 +38,48 @@
             <h4>Elemento afectado por más de una clase</h4>
             <p>En la primera clase se aplican los elementos base y en las restantes se aplican estilos particulares, combinas la primera con cualquiera de estas (se encadenan sin espacios). En CSS se escriben separadas. En el HTML se deja espacio para ponerle varias clases al elemento.</p>
             <h3>Selectores de ID</h3>
-            <p>Comienza con un carácter # seguido del nombre del id. Se puede usar una sola vez en cada documento y a cada elemento se le puede aplicar un unico id. Dos formas de seleccionarlo: por su nombre o con elemento y su nombre (el id tiene que ser del elemento) al que se le va a aplicar estilo.</p>
+            <p>Comienza con un carácter # seguido del nombre del id. Se puede usar una sola vez en cada documento y a cada elemento se le puede aplicar un único id. Dos formas de seleccionarlo: por su nombre o con elemento y su nombre (el id tiene que ser del elemento) al que se le va a aplicar estilo.</p>
             <h2>Selectores de atributo:</h2>
             <p>Los elementos/etiquetas del HTML pueden tener atributos, proporcionan un nivel de profundidad mayor para aplicar estilo.</p>
+            <h3>Selectores de presencia y valor</h3>
+            <p></p>
+            <h3>Selectores coincidentes con subcadenas</h3>
+            <p></p>
+            <h3>Minúscula y mayúscula</h3>
+            <p>Con el carácter i después del valor del atributo (ejemplo, atributo="x" i), le decimos al navegador que tome los valores escritos en mayus y minus.</p>
+            <h3>Pseudoclase (:)</h3>
+            <p>Es un selector para dar estilo a elementos que están en un estado especifico, por ejemplo, cambia si le pasamos el cursor por encima. Ayudan a reducir el exceso de clases y al mantenimiento del CSS.</p>
+            <p>Se comportan como si se hubiera añadido un clase. Una pseudoclase podría escribirse sin que le preceda un selector, pero  esto equivale a un selector universa (selecciona todos los elementos especificados del HTML o documento), y para tener mas control se recomienda especificar que elemento y estado se quiere aplicar estilo.</p>
+            <p><strong>Ejemplos:</strong> :last-child (da estilo al ultimo hijo de un elemento padre), :only-child (da estilo a un elemento que solo tenga un hijo) o :invalid (da estilo a un input o form señalar el error.).</p>
+            <h4>Pseudoclase de acción de usuario o dinámicas</h4>
+            <p>Actúan cuando el usuario interactuá con el documento. <strong>Ejemplos:</strong> :hover (interviene cuando el usuario pasa el ratón por encima del elemento en un enlace generalmente), :focus (interviene si el usuario selecciona los elementos con el teclado)</p>
+            <h3>Pseudoelemento (::)</h3>
+            <p>Actúan como si hubieras creado un elemento nuevo en el HTML (toma como base uno existente y crear uno nuevo), en lugar de crear una clase a un elemento que ya existía. Los primeros elementos utilizaban la sintaxis de dos puntos (:) por si ves uno en algún documento.</p>
+            <p>La idea de las pseudoclase y pseudoelementos es que cada cosa que quieras hacer tenga su herramienta y no tengas que modificar las etiquetas, el código o el contenido. Por ejemplo article p ::first-line {}, seleccionara la primera linea de cada parrafo/elemento (ojo!) sin importar la cantidad de contenido que si se modifica no necesitarás cambiar el código del HTML.</p>
+            <h3>Estructura de selección y niveles</h3>
+            <p>No es recomendable crear selectores que bajen mas de 2 niveles</p>
+            <h3>Combinar pseudoclase y pseudoelemento</h3>
+            <p>Por ejemplo elemento .pseudoclase::pseudoelemento {}.</p>
+            <h3>Insertar contenido con pseudoelementos ::before y ::after</h3>
+            <p>Hay pseudoelementos especiales que se utilizan junto la propiedad "content" para crear contenido en el HTML usando CSS.</p>
+            <p>Con ::before y ::after, podemos llamar a un elemento o clase e introducir un icono antes (principio) o después (final) de lo que haya en el elemento seleccionado.</p>
+            <p>Otro ejemplo es insertar una cadena de texto vaciá como valor de content, para después darle estilo como a cualquier elemento.</p>
+            <h2>Selectores de Combinación:</h2>
+            <p>Combinan otros selectores que tienen una relación y ubicación en el documento</p>
+            <h3>Selector descendiente (un espacio)</h3>
+            <p>Dejando espacio enter selectores, se puede dar estilo a todos los elementos hijos y nietos que estén dentro de un elemento padre.</p>
+            <h3>Selector hijo directo (>)</h3>
+            <p>Solo se puede dar estilo a un elemento hijo directo de un elemento padre. Los hijos de los hijos no cuentan (para esto usar selector descendiente).</p>
+            <h3>Selector hermano adyacente (+)</h3>
+            <p>Selecciona un elemento que se encuentre debajo con la misma jerarquía.</p>
+            <h3>Selector hermano general (~)</h3>
+            <p>Selecciona los hermanos de un elemento incluso si no están debajo de él.</p>
+            <h3>Selectores de etiqueta avanzados:</h3>
+            <h4>Selector valor de atributo de inicio (^)</h4>
+            <p>Adelante de un atributo[atributo^="valor de inicio"] para seleccionar la parte del elemento deseado</p>
+            <h4>Selector de valor de atributo general (*)</h4>
+            <p>Adelante de un atributo[atributo*="valor en un lugar del atributo"] para seleccionar la parte del elemento deseado</p>
+
         </article>
     </main>
 
